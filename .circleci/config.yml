@@ -6,7 +6,7 @@ jobs:
             - develop
     docker:
       - image: circleci/node:lts
-      - image: circleci/node:lts-browsers
+      - image: selenium/standalone-chrome:3.1.0
         environment:
           CHROME_BIN: "/usr/bin/google-chrome"
     steps:
