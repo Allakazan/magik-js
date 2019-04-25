@@ -1,2 +1,6 @@
+# Bundle and Dependencies
 node_modules/
 dist/
+
+# IDE
+.vscode
