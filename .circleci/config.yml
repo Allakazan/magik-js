@@ -6,6 +6,9 @@ jobs:
             - develop
     docker:
       - image: circleci/node:lts
+      - image: circleci/python:3.4-browsers
+        environment:
+          CHROME_BIN: "/usr/bin/google-chrome"
     steps:
       - checkout
       - run:
