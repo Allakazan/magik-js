@@ -1,0 +1,14 @@
+version: 2
+jobs:
+  build:
+    branches:
+        only:
+            - develop
+    docker:
+      - image: python:3.4.4
+      - image: circleci/python:3.4-browsers
+        environment:
+          CHROME_BIN: "/usr/bin/google-chrome"
+    steps:
+      - checkout
+      - run: echo "A first hello"
