@@ -1,5 +1,6 @@
 var webpackConfig = require('./webpack.config.js')
 webpackConfig.mode = 'production'
+webpackConfig.output.filename = './test-bundle.js'
 webpackConfig.entry = ''
 
 module.exports = function (config) {
