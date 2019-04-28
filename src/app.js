@@ -4,13 +4,10 @@
 Copyright (c) 2019 Bruno Marques
 
  */
-(function () {
+import MagikJs from './app/Magik'
+
+(function (MagikJs) {
     'use strict';
-
-    function MagikJs() { }
-    MagikJs.prototype = {
-
-    }
 
     // amd
     if (typeof define !== 'undefined' && define.amd) define(function () { return MagikJs; });
@@ -18,9 +15,5 @@ Copyright (c) 2019 Bruno Marques
     if (typeof exports !== 'undefined') exports.MagikJs = MagikJs;
     // browser
     else if (typeof window !== 'undefined') window.MagikJs = MagikJs;
-    // nodejs
-    if (typeof module !== 'undefined') {
-        module.exports = MagikJs;
-    }
     
-})();
+})(MagikJs);
