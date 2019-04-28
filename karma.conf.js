@@ -8,10 +8,10 @@ module.exports = function (config) {
         frameworks: ['mocha', 'chai'],
         files: [
             './dist/bundle.js',
-            './test/**/*.spec.js'
+            './test/index.js'
         ],
         preprocessors: {   
-            './test/**/*.spec.js': ['webpack']
+            './test/index.js': ['webpack']
         },
         webpack: webpackConfig,
         webpackMiddleware: {
