@@ -1,5 +1,12 @@
-export default class MagikJs {
-    constructor(a) {
-        this.a = a
+export default class MagikJs
+{
+    constructor(element, options = {})
+    {
+        this.element = element
+        this.options = options
+    }
+
+    init() {
+        
     }
 }
