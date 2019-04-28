@@ -1,10 +1,21 @@
+var webpackConfig = require('./webpack.config.js')
+webpackConfig.mode = 'production'
+webpackConfig.entry = ''
+
 module.exports = function (config) {
     config.set({
         frameworks: ['mocha', 'chai'],
         files: [
-            'src/**/*.js',
-            'test/**/*.spec.js'
+            './dist/bundle.js',
+            './test/**/*.spec.js'
         ],
+        preprocessors: {   
+            './test/**/*.spec.js': ['webpack']
+        },
+        webpack: webpackConfig,
+        webpackMiddleware: {
+          noInfo: true
+        },    
         reporters: ['progress'],
         port: 9876,  // karma web server port
         colors: true,
